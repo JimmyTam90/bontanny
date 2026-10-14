@@ -2,7 +2,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StickyCta from '@/components/StickyCta';
-import { CANONICAL_BASE_URL, SITE_ORIGIN, LOGO, BRAND_NAME } from '@/lib/config';
+import { CANONICAL_BASE_URL, SITE_ORIGIN, LOGO, ICONS, BRAND_NAME } from '@/lib/config';
 
 export const metadata = {
   metadataBase: new URL(SITE_ORIGIN),
@@ -16,7 +16,16 @@ export const metadata = {
     siteName: BRAND_NAME,
     title: 'Bontanny Red Light Therapy Panels, Belts & Portable Devices',
     description: 'Browse Bontanny red light therapy collections and what to check before you buy.',
-    images: [{ url: LOGO.absoluteUrl, width: LOGO.width, height: LOGO.height, alt: LOGO.alt }],
+    images: [{ url: ICONS.shareImage, width: 1254, height: 1254, alt: LOGO.alt }],
+  },
+  // Icon URLs are explicit and include the basePath (metadata icon strings are not auto-prefixed).
+  icons: {
+    icon: [
+      { url: ICONS.ico, sizes: 'any' },
+      { url: ICONS.png, type: 'image/png' },
+    ],
+    shortcut: ICONS.ico,
+    apple: ICONS.apple,
   },
   robots: { index: true, follow: true },
 };
