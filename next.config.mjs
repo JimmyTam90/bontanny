@@ -12,7 +12,10 @@ const nextConfig = {
   trailingSlash: false,
   poweredByHeader: false,
   reactStrictMode: true,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    remotePatterns: [{ protocol: 'https', hostname: 'bontanny.com', pathname: '/cdn/shop/**' }],
+  },
   async redirects() {
     // Direct visits to the bare Spoke origin land on the app.
     return [{ source: '/', destination: BASE_PATH, basePath: false, permanent: false }];

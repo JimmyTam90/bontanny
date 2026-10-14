@@ -3,7 +3,7 @@ import AffiliateLink from './AffiliateLink';
 import { resolveDestination } from '@/lib/affiliate';
 
 const NAV = [
-  { href: '#collections', label: 'Collections' },
+  { href: '#models', label: 'Models' },
   { href: '#guide', label: 'Buying Guide' },
   { href: '#faq', label: 'FAQ' },
 ];
