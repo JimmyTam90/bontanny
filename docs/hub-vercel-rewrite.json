@@ -1,0 +1,7 @@
+{
+  "_note": "MERGE these two entries into the EXISTING rewrites array of the primegearlab.com Hub vercel.json. Do not replace the file.",
+  "rewrites": [
+    { "source": "/bontanny", "destination": "https://bontanny-spoke.vercel.app/bontanny" },
+    { "source": "/bontanny/:path*", "destination": "https://bontanny-spoke.vercel.app/bontanny/:path*" }
+  ]
+}
