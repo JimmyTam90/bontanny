@@ -53,7 +53,7 @@ export default function Home() {
 
       <section id="models" className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <h2 className="text-2xl font-extrabold text-white sm:text-3xl">Bontanny Models</h2>
-        <p className="mt-2 max-w-2xl text-slate-300">Six models from the official Bontanny store. "From" prices were read on {OBSERVED_ON} and change often, so confirm details on each product page.</p>
+        <p className="mt-2 max-w-2xl text-slate-300">Six models from the official Bontanny store. &quot;From&quot; prices were read on {OBSERVED_ON} and change often, so confirm details on each product page.</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCTS.map((p, i) => (
             <ProductCard key={p.id} item={p} priority={i < 3} />

@@ -13,8 +13,13 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
+    // Optimizer is off, so no image is proxied or validated at build time.
     unoptimized: true,
-    remotePatterns: [{ protocol: 'https', hostname: 'bontanny.com', pathname: '/cdn/shop/**' }],
+    // Kept explicit for the merchant's known hosts only (no wildcard host).
+    remotePatterns: [
+      { protocol: 'https', hostname: 'bontanny.com', pathname: '/cdn/shop/**' },
+      { protocol: 'https', hostname: 'cdn.shopify.com' },
+    ],
   },
   async redirects() {
     // Direct visits to the bare Spoke origin land on the app.
