@@ -35,10 +35,11 @@ export const metadata = {
   icons: {
     icon: [
       { url: ICONS.ico, sizes: 'any' },
-      { url: ICONS.png, type: 'image/png' },
+      { url: ICONS.png32, type: 'image/png', sizes: '32x32' },
+      { url: ICONS.png, type: 'image/png', sizes: '512x512' },
     ],
     shortcut: ICONS.ico,
-    apple: ICONS.apple,
+    apple: [{ url: ICONS.apple, sizes: '180x180', type: 'image/png' }],
   },
   robots: { index: true, follow: true },
 };
